@@ -65,11 +65,15 @@ export class AppComponent  {
     reader.onload = (e) => {
       console.log(reader.result);
       let fileString = reader.result as string;
-      let fileString1 = JSON.stringify(fileString);
-      let obj = JSON.parse(fileString1);
-
-      this.todo.file = obj.file
-      this.todo.task1 = obj.task1
+      console.log(fileString);
+      // let fileString1 = JSON.stringify(fileString);
+      // console.log(fileString1);
+      let obj = JSON.parse(fileString);
+      console.log(obj[0]);
+      console.log(obj.file);
+      console.log(obj.task1);
+      this.todo.file = obj[0].file
+      this.todo.task1 = obj[0].task1
 
       console.log(this.todo.file);
       console.log(this.todo.task1);
