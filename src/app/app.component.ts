@@ -6,6 +6,18 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+
+  //  [
+  //   {"file":"todo", "task1":"brush teeth"}
+  //  ]
+  
+  todo = {
+  "file": "",
+  "task1": "",
+  } 
+
+
+
   checkboxLabel = " I agree your terms";
   buttonClickedMessage = "You clicked the button";
   buttonClicked = false;
@@ -52,8 +64,30 @@ export class AppComponent  {
 
     reader.onload = (e) => {
       console.log(reader.result);
+      let fileString = reader.result as string;
+      let fileString1 = JSON.stringify(fileString);
+      let obj = JSON.parse(fileString1);
+
+      this.todo.file = obj.file
+      this.todo.task1 = obj.task1
+
+      console.log(this.todo.file);
+      console.log(this.todo.task1);
       //this.fileString = myReader.result as string;
    };
+   // put this at bottom or it will keep reading and triggering
+   // need to read the file before you can use it
+   reader.readAsText(file1);
+   
+  //  
+  //  localStorage.setItem("testJSON", myJSON);
+
+  //  // Retrieving data:
+  //  let text = localStorage.getItem("testJSON");
+  //  let obj = JSON.parse(text);
+
+
+  
 
 
   }
