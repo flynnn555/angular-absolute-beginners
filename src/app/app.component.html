@@ -1,4 +1,72 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="amber"><p>amber</p> </div>
+<div class="peach"><p>peach</p> </div>
+<div class="pink"><p>pink</p> </div>
+<div class="mov"><p>mov</p> </div>
+<div class="blue"><p>blue</p> </div>
+<div class="sky"><p>sky</p> </div>
+<div>
+  <h1>Todo List</h1>
+  </div>
+<div>
+  
+  <div>
+    <p><b>Welcome to your <u class="red">Todo</u> list</b></p>
+    <p>Please add a tasks below</p>
+    <p><i>*tasks added immediately</i></p>
+  </div>
+
+<input type="checkbox" (change)="checkboxEvent()">
+  <label>{{checkboxLabel}}</label>
+  <br>
+  <br>
+
+<div>
+  <button class="button-style" (click)="clicked()">click me</button>  
+</div>
+
+<div>
+  <button class="button-style2" (click)="clicked()">click me</button>  
+</div>
+
+<div *ngIf="buttonClicked">
+   <p>{{buttonClickedMessage}}</p>
+</div>
+
+<div *ngIf="checkboxState">
+   <p>{{checkboxCheckedMessage}}</p>
+</div>
+
+<div *ngIf="userAgreedTerms">
+    <p>{{userAgreedTermsMessage}}</p>
+</div>
+
+<div *ngIf="userNotAgreedTerms">
+  <p>{{userNotAgreedTermsMessage}}</p>
+</div>
+
+</div>
+
+
+<div class="card amber">
+  <div class="container">
+    <h4><b>Watch todays video</b></h4> 
+    <p class="description">beginning angular part 2 and learn how to implement </p> 
+    <button class="button-style2" (click)="clicked()">done</button> 
+  </div>
+</div>
+
+<div class="card peach">
+  <div class="container">
+    <h4><b>Watch todays video</b></h4> 
+    <p class="description">beginning angular part 3</p> 
+    <button class="button-style2" (click)="clicked()">done</button> 
+  </div>
+</div>
+
+<div class="card">
+  <div class="container">
+    <h4><b>Watch todays video</b></h4> 
+    <p class="description">beginning angular part 3</p> 
+    <button class="button-style2" (click)="clicked()">done</button> 
+  </div>
+</div>
