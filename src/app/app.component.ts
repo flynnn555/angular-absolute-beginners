@@ -43,5 +43,20 @@ export class AppComponent  {
     this.checkboxState = this.checkboxState ? false : true;
   }
 
+  fileUpload(event: Event): void {
+    let reader = new FileReader();
+    let target = event.target as HTMLInputElement;
+    let files: FileList = target.files;
+    let file1 = files[0];
+    console.log(file1);
+
+    reader.onload = (e) => {
+      console.log(reader.result);
+      //this.fileString = myReader.result as string;
+   };
+
+
+  }
+
 }
 
